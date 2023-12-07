@@ -1,0 +1,25 @@
+/* index */
+.body{
+    background: url("https://i.postimg.cc/RZT8z0v8/newSize.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+a:hover {
+
+    /* text-shadow: turquoise; */
+   color :white; 
+}
+
+
+/* -------------------------------------------------------------- */
+/* About ---------------------------------------------------------*/
+.about {
+
+    width: 70%;
+    box-shadow: 0 0 4rem 0 rgba(1, 0, 0.5, 1);
+    text-align: center;
+    margin-left: 15%;
+    color: black;
+}
+/* -------------------------------------------------------------- */
