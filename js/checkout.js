@@ -31,3 +31,10 @@ function setItems(){
 }
 let main = document.querySelector('.h1');
 main.innerText = "Checkout Page";
+
+let purchasedItems;
+//parse array from local storage or if it fails set it as an empty array
+
+    purchasedItems = JSON.parse(localStorage.getItem(`bought`) || []);
+    
+    purchasedItems = [];
