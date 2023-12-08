@@ -8,8 +8,8 @@ let items = JSON.parse(localStorage.getItem('items'))
 main.innerHTML = items.map(function(item,index){
     return `
 
+    <table class="tab">
     <main>
-  <table>
     <div class="containerP">
     <div class="card" style="width: 18rem;">
       <img src="${item.url}" class="card-img-top" alt="...">
@@ -58,3 +58,22 @@ main.addEventListener('click' , function(){
         add(event.target.value)
     }
 })
+
+function search() {
+    let inputValue = document.getElementById('filterInput').value.toLowerCase();
+
+    
+    if (inputValue.trim() === "") {
+        alert('Item not found');
+        
+        loadItems(productPage);
+        
+    } else {
+       
+        let filteredItems = productPage.filter(item => item.name.toLowerCase().includes(inputValue));
+        loadItems(filteredItems);
+    }
+}
+
+let searchBtn = document.querySelector(".search");
+searchBtn.addEventListener('click', search)
