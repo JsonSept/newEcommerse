@@ -1,4 +1,5 @@
 /* index */
+
 button{
     border-radius: 7px;
     background-color:black;
@@ -132,4 +133,9 @@ form {
 
 span {
     margin-top: 30%;
+}
+
+.div {
+    text-align: center;
+    margin-right: 5%;
 }

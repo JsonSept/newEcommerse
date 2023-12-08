@@ -16,7 +16,7 @@ function MyConstruct(id,name,description,price,url){
 // ------------------------------------------------------------------------------------------------------------------
 //items for the constructor function
 let item1 = new MyConstruct(1, 'ACER Aspire' , '15.6" laptop ,4GB RAM',`R${7559.00}`,'https://i.postimg.cc/ZqkpL5JC/item1.webp')
-let item2 = new MyConstruct(2, 'PC Monitor' , 'This is better than the fake',`R${3550.00}`,'https://i.postimg.cc/dtpyqVk4/item2.webp')
+let item2 = new MyConstruct(2, 'PC Monitor' , 'a Monitor with fine picture quality for gaming',`R${3550.00}`,'https://i.postimg.cc/dtpyqVk4/item2.webp')
 let item3 = new MyConstruct(3, 'Mouse and KeyBoard' , 'Redragon 4-in-1 Gaming Combo',`R${1049.00}`,'https://i.postimg.cc/WztdvBsB/item3M-K.webp')
 let item4 = new MyConstruct(4, 'Gaming Chair' , 'Raidmax DK925 ARGB Gaming Chair-Black',`R${3559.00}`,'https://i.postimg.cc/wBVMsqMK/item4GC.webp')
 let item5 = new MyConstruct(5, 'Gaming Controller' , 'Razer Raiju PS4 Analogue Controller',`R${4570.00}`,'https://i.postimg.cc/Z5z57Byt/item4GCR.webp')
@@ -46,7 +46,7 @@ function loadItems(){
         console.log(item);
         console.log(index);
         return `
-            <tr>
+            <tr table-bordered-light>
                 <td>${item.id}</td>
                 <td>${item.name}</td>
                 <td>${item.price}</td>
@@ -74,16 +74,3 @@ table.addEventListener('click',function(){
     }
 })
 
-function spinner() {
-   
-    let spinnerElement = document.querySelector('.spinner');
-
-    spinnerElement.style.visibility = 'visible';
-
-    const isConditionMet = checkYourCondition();
-    if (items.length == 0) {
-        spinnerElement.style.visibility = 'hidden';
-    }
-}
-
-spinner();
