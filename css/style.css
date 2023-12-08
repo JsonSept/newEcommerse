@@ -4,14 +4,42 @@
     background-repeat: no-repeat;
     background-size: cover; 
 }
+.header {
+    text-align: center;
+    font-size: xx-large;
+    margin-top: 10%;
+}
+.nav-link {
+    border: 2px;
+    border-left: cyan;
+    border-right: cyan
 
-a:hover {
-
-    /* text-shadow: turquoise; */
-   color :white; 
+}
+.navbar {
+    position:static;
+}
+footer {
+    width: 100%;
+    background-color: black;
+    height: 5%;
+    color: white;
+    bottom: 0;
+    position:fixed;
+    margin-bottom: 0;
+    text-align: center;
 }
 
+@media screen and (max-width: 700px) {
+    .body{ 
+        background-size:auto;
 
+    }
+    .header {
+        text-align: center;
+        font-size: xx-large;
+        margin-top: 80%;
+    }
+}
 /* -------------------------------------------------------------- */
 /* About ---------------------------------------------------------*/
 .about {
@@ -22,4 +50,69 @@ a:hover {
     margin-left: 15%;
     color: black;
 }
+
+/* --------------------------------------------------------------- */
+/* product */
+.card {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-left: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.containerP {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+@media screen and (max-width: 1090px) {
+    .containerP {
+        text-align: center;
+    }
+    .card-img-top{
+        height: auto;
+    }
+    .card {
+        margin-right: 20px;
+        font-size: xx-small;
+    }
+}
 /* -------------------------------------------------------------- */
+/* Admin */
+#product-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+/* -------------------------------------------------------------- */
+/* Contact */
+form {
+    border-radius: 10px;
+    background:transparent;
+    box-shadow: 0 0 2rem 0 rgb(1, 248, 252);
+    color:aqua;
+    width: 290px;
+    padding: 4px;
+    text-align: center;
+  }
+  .form {
+    margin-left: 38%;
+    margin-top: 10%;
+  }
+  
+  
+  @media screen and (max-width: 1090px) {
+    .form{
+        font-size: small;
+        text-align: center;
+        display: flex;
+        margin-left: 1%;
+        margin-top: 39%;
+    }
+
+}
