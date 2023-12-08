@@ -1,9 +1,13 @@
-
+// creating a new array
 let selected = []
 
+let items = JSON.parse(localStorage.getItem('items'))
+// setting main to vairable so that we can access it in the html
 let main = document.querySelector('main')
 
-function loadItems(){d
+// created a function to load my items from the empty array
+let table = document.querySelector('table')
+function loadItems() {
     let products = items.map(function(item,index){
         console.log(item);
         console.log(index);
@@ -18,25 +22,30 @@ function loadItems(){d
                 <td><button class='delete' value=${index}>Delete</button></td>
     
             </tr>`
-    })
+        })
+        table.innerHTML = products.join('')
+    }
+// a function to sort my items price
+function sorting(){
+    items.sort((a, b) => {
+        return a.price - b.price;
+    });
+    let sortBtn = document.querySelector('.sort');
+    sortBtn.addEventListener('click',sorting);
 }
+sorting();
+loadItems();
 
-function sortItems() {
-    let sortedProduct = items.slice(); // Create a copy of the array to avoid modifying the original
-    sortedProduct.sort((a, b) => a.price - b.price);
-    loadItems(sortedProduct);
-}
-
-let sortButton = document.querySelector('.sort');
-sortButton.addEventListener('click', sortItems);
+    
 
 
 
-let items = JSON.parse(localStorage.getItem('items'))
+// getting data from my local storage
+// below is a table to add in all our item data from the array
 main.innerHTML = items.map(function(item,index){
     return `
 
-    <table class="tab">
+    <table class="tab col-4 col-5 col-3">
     <main>
     <div class="containerP">
     <div class="card" style="width: 18rem;">
@@ -56,9 +65,4 @@ main.innerHTML = items.map(function(item,index){
     
 }).join('')
 
-
-
-
-
-// //---------------------------------------------------------------
 
